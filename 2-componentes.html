@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Componentes em React</title>
+    <link rel='stylesheet' href='main.css'>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function Button() {
+        return (
+          <button className="bg-rose-400 text-white font-medium py-2 px-8 rounded-lg w-min 
+          hover:bg-rose-500 transition-colors duration-300">
+            Botão
+          </button>
+        )
+      }
+
+      function App() {
+        return (
+          <main className="p-3 flex flex-col gap-4">
+            <h1 className="text-2xl font-bold mb-4">Componente:</h1>
+            <Button />
+            <Button />
+            <Button />
+          </main>
+        )
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(
+        <App />
+      );
+    </script>
+  </body>
+</html>
